@@ -17,7 +17,7 @@
 .card {
   flex-direction: row;
   align-items: center;
-  max-width: 540px;
+  width: 800px;
   position: relative;
   display: flex;
   min-width: 0;
@@ -27,6 +27,8 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   cursor: pointer;
+  padding: 8px;
+  overflow: auto;
 }
 
 form {
@@ -70,6 +72,23 @@ nav {
   text-decoration: none;
   cursor: pointer;
   margin: 7px 10px;
+}
+
+.tags-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 2px 14px;
+  border: 1px solid #afa6a6;
+  border-radius: 10px;
+  padding: 2px 20px;
+  text-align: center;
+  color: white;
+  background: #5f6565;
+  cursor: pointer;
 }
 
 .card-title {

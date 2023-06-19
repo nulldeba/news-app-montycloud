@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import Search from "./components/Search";
 import Pagination from "./components/Pagination";
 import "./App.css";
@@ -12,6 +12,7 @@ const initialState = {
   page: 1,
   news: [],
   totalRecord: 0,
+  tags:[]
 };
 
 export const AppContext = createContext();
@@ -23,6 +24,7 @@ function App() {
     try {
       const response = await fetch(url).then((data) => data.json());
       const newsData = response?.response?.results;
+      
       dispatch({
         type: "GET_NEWS",
         payload: {
